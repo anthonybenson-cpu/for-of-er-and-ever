@@ -1,7 +1,86 @@
 /******************
  * YOUR CODE HERE *
  ******************/
-hfh
+// General Looping Problems
+
+const addAll = function(numbers) {
+  let total = 0;
+  for (const num of numbers) {
+    total += num;
+  }
+  return total;
+};
+
+
+const countSpaces = function (str) {
+  let count = 0;
+  for (const char of str) {
+    if (char === ' ') count++;
+  }
+  return count;
+};
+
+const countTrues = function (arr) {
+  let count = 0;
+  for (const val of arr) {
+    if (val === true) count++;
+  }
+  return count;
+};
+
+const makeFriendly = function (paragraph) {
+  let result = '';
+  for (const char of paragraph) {
+    if (char === '.') {
+      result += '!';
+    } else {
+      result += char;
+    }
+  }
+  return result;
+};
+
+// Maps
+
+const cubeAll = function (numbers) {
+  const result = [];
+  for (const num of numbers) {
+    result.push(num ** 3);
+  }
+  return result;
+};
+
+const addNoises = function (animals) {
+  const result = [];
+  for (const animal of animals) {
+    let sound = '';
+    if (animal === 'Fido') sound = ' says "Woof!"';
+    else if (animal === 'Rollo') sound = ' says "Woof!"';
+    else if (animal === 'Garfield') sound = ' says "Meow!"';
+    else if (animal === 'Felix') sound = ' says "Meow!"';
+    else if (animal === 'Sharp Tooth') sound = ' says "ROWR."';
+    result.push(animal + sound);
+  }
+  return result;
+};
+
+// Filters
+
+const womenOnly = function (names) {
+  const result = [];
+  for (const entry of names) {
+    if (entry.endsWith('F')) result.push(entry);
+  }
+  return result;
+};
+
+const integersOnly = function (numbers) {
+  const result = [];
+  for (const num of numbers) {
+    if (Number.isInteger(num)) result.push(num);
+  }
+  return result;
+};
 
 /*********************************
  * OUR CODE BELOW; DO NOT TOUCH! *
